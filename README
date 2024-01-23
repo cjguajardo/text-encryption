@@ -1,0 +1,29 @@
+# Desafío de Encriptador de Texto (Español)
+
+## Descripción
+Esta es una aplicación web para encriptar texto. Utiliza Tailwind CSS para el estilo y javascript plano para la lógica.
+
+## Uso
+Ingrese el texto que desea encriptar en el campo de entrada y haga clic en el botón 'Encriptar'. El texto encriptado se mostrará en la pantalla.
+
+## Contribuyendo
+Las solicitudes de pull son bienvenidas. Para cambios importantes, por favor abra primero un problema para discutir lo que le gustaría cambiar.
+
+## Licencia
+MIT
+
+
+
+# Text Encryptor Challenge (English)
+
+## Description
+This is a web application for encrypting text. It uses Tailwind CSS for styling and plain javascript for the logic.
+
+## Usage
+Enter the text you want to encrypt in the input field and click on the 'Encrypt' button. The encrypted text will be displayed on the screen.
+
+## Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+## License
+MIT

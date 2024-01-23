@@ -7,16 +7,6 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <title>Text Encryptor</title>
   <style>
-    .ref_img {
-      background-image: url('Encriptador - 1 Desktop.jpg');
-      width: 100vw;
-      height: 100vh;
-      background-size: contain;
-      background-repeat: no-repeat;
-      position: absolute;
-      z-index: -1;
-    }
-
     .toast_show {
       animation: toast_show 0.5s ease-in-out;
     }
@@ -56,9 +46,9 @@
     <div id="toast_message" class="text-sm h-6">Test</div>
   </div>
 
-  <div class="md:max-w-4xl m-auto w-full grid grid-cols-1 sm:grid-cols-3 p-1 md:p-5">
+  <main class="md:max-w-4xl m-auto w-full grid grid-cols-1 sm:grid-cols-3 p-1 md:p-5">
     <!-- INPUT -->
-    <div class="p-2 mb-2 md:mb-8 md:mb-0 col-span-2">
+    <section class="p-2 mb-2 md:mb-8 md:mb-0 col-span-2">
       <img src="https://cgcapps.cl/_astro/logo.xaAqmTzJ_Z1dtNpM.svg" alt="CGC" class="w-12 h-12">
       <textarea id="message_input"
         class="my-2 md:my-12 w-full h-52 p-1 md:p-4 text-white text-xs text-wrap rounded-md bg-transparent resize-none"
@@ -70,10 +60,10 @@
         <button id="decrypt_button"
           class="bg-slate-500 hover:bg-slate-700 hover:shadow-xl text-white text-sm py-1 px-4 rounded-full flex-1">Desencriptar</button>
       </div>
-    </div>
+    </section>
 
     <!-- NO MESSAGE -->
-    <div class="h-full md:min-h-96 bg-slate-800 shadow-lg rounded-xl px-2 py-8" id="no_message">
+    <section class="h-full md:min-h-96 bg-slate-800 shadow-lg rounded-xl px-2 py-8" id="no_message">
       <div class="flex flex-col items-center justify-center">
         <img src="assets/Muñeco.svg" alt="" class="w-[50%] md:w-[100%] my-4 md:my-12">
         <span class="self-stretch text-center text-zinc-200 text-md font-bold">
@@ -83,10 +73,10 @@
           Ingresa el texto que desees encriptar o desencriptar.
         </span>
       </div>
-    </div>
+    </section>
 
     <!-- MESSAGE -->
-    <div class="h-full md:min-h-96 bg-slate-800 shadow-lg rounded-xl px-2 py-2" id="message" style="display:none">
+    <section class="h-full md:min-h-96 bg-slate-800 shadow-lg rounded-xl px-2 py-2" id="message" style="display:none">
       <div class="flex flex-col items-center justify-center">
         <div id="result_title" class="text-zinc-100 text-sm font-bold">
           Resultado
@@ -103,8 +93,23 @@
           <img src="assets/copy.svg" alt="copy icon" class="w-4 h-4 inline-block ml-2">
         </button>
       </div>
+    </section>
+  </main>
+
+  <footer class="bg-indigo-950/90 text-white text-xs text-center sm:absolute bottom-0 w-full p-2">
+    <small>Desarrollado por <b>Carlos Guajardo</b></small>
+    <small>2024</small>
+    <div>
+      <!-- github -->
+      <a href="https://github.com/cjguajardo" target="_blank" class="text-white hover:text-indigo-500">
+        <img src="assets/github.svg" alt="github icon" class="w-4 h-4 inline-block ml-2">
+      </a>
+      <!-- linkedin -->
+      <a href="https://www.linkedin.com/in/cjguajardo/" target="_blank" class="text-white hover:text-indigo-500">
+        <img src="assets/linkedin.svg" alt="linkedin icon" class="w-4 h-4 inline-block ml-2">
+      </a>
     </div>
-  </div>
+  </footer>
 </body>
 
 </html>
