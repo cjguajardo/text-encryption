@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Text Encryptor</title>
+  <style>
+    .ref_img {
+      background-image: url('Encriptador - 1 Desktop.jpg');
+      width: 100vw;
+      height: 100vh;
+      background-size: contain;
+      background-repeat: no-repeat;
+      position: absolute;
+      z-index: -1;
+    }
+
+    .toast_show {
+      animation: toast_show 0.5s ease-in-out;
+    }
+
+    .toast_hide {
+      animation: toast_hide 0.5s ease-in-out;
+    }
+
+    @keyframes toast_show {
+      0% {
+        transform: translateX(100%);
+      }
+
+      100% {
+        transform: translateX(0%);
+      }
+    }
+
+    @keyframes toast_hide {
+      0% {
+        transform: translateX(0%);
+      }
+
+      100% {
+        transform: translateX(100%);
+      }
+    }
+  </style>
+  <script src="app.js"></script>
+</head>
+
+<body class="bg-slate-700 md:overflow-hidden">
+
+  <div id="toast" style="display:none"
+    class="bg-indigo-500 text-white text-sm w-[60%] right-[-4px] top-4 p-2 absolute rounded shadow-md flex-rows gap-2">
+    <img id="toast_icon" class="w-6 h-6" alt="toast icon" src="assets/check.svg" />
+    <div id="toast_message" class="text-sm h-6">Test</div>
+  </div>
+
+  <div class="md:max-w-4xl m-auto w-full grid grid-cols-1 sm:grid-cols-3 p-1 md:p-5">
+    <!-- INPUT -->
+    <div class="p-2 mb-2 md:mb-8 md:mb-0 col-span-2">
+      <img src="https://cgcapps.cl/_astro/logo.xaAqmTzJ_Z1dtNpM.svg" alt="CGC" class="w-12 h-12">
+      <textarea id="message_input"
+        class="my-2 md:my-12 w-full h-52 p-1 md:p-4 text-white text-xs text-wrap rounded-md bg-transparent resize-none"
+        placeholder="Ingrese el texto aquí"></textarea>
+
+      <div class="flex gap-2">
+        <button id="encrypt_button"
+          class="bg-indigo-500 hover:bg-indigo-700 hover:shadow-xl text-white text-sm py-1 px-4 rounded-full flex-1">Encriptar</button>
+        <button id="decrypt_button"
+          class="bg-slate-500 hover:bg-slate-700 hover:shadow-xl text-white text-sm py-1 px-4 rounded-full flex-1">Desencriptar</button>
+      </div>
+    </div>
+
+    <!-- NO MESSAGE -->
+    <div class="h-full md:min-h-96 bg-slate-800 shadow-lg rounded-xl px-2 py-8" id="no_message">
+      <div class="flex flex-col items-center justify-center">
+        <img src="assets/Muñeco.svg" alt="" class="w-[50%] md:w-[100%] my-4 md:my-12">
+        <span class="self-stretch text-center text-zinc-200 text-md font-bold">
+          Ningún mensaje fue encontrado
+        </span>
+        <span class="self-stretch text-center text-zinc-400 text-xs font-normal">
+          Ingresa el texto que desees encriptar o desencriptar.
+        </span>
+      </div>
+    </div>
+
+    <!-- MESSAGE -->
+    <div class="h-full md:min-h-96 bg-slate-800 shadow-lg rounded-xl px-2 py-2" id="message" style="display:none">
+      <div class="flex flex-col items-center justify-center">
+        <div id="result_title" class="text-zinc-100 text-sm font-bold">
+          Resultado
+        </div>
+
+        <div id="result_text"
+          class="md:min-h-80 text-zinc-300 text-xs text-pretty my-4 p-2 text-ellipsis overflow-hidden">
+          &nbsp;
+        </div>
+
+        <button id="copy_button"
+          class="hover:bg-indigo-500/20 hover:shadow-xl text-white text-sm py-1 px-4 rounded-full">
+          Copiar
+          <img src="assets/copy.svg" alt="copy icon" class="w-4 h-4 inline-block ml-2">
+        </button>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
